@@ -9,7 +9,7 @@ load_dotenv()
 
 if __name__ == "__main__":
     print("Ingesting...")
-    loader = TextLoader(r"C:\Users\Lobna\rag_langchain\mediumblog1.txt",encoding="utf-8")
+    loader = TextLoader(r"mediumblog1.txt",encoding="utf-8")
     document = loader.load()
 
     print("Splitting...")
