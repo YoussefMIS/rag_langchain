@@ -9,7 +9,7 @@ load_dotenv()
 
 if __name__ == "__main__":
     print("Ingesting...")
-    loader = TextLoader("mediumblog1.txt")
+    loader = TextLoader(r"C:\Users\Lobna\rag_langchain\mediumblog1.txt",encoding="utf-8")
     document = loader.load()
 
     print("Splitting...")
@@ -24,3 +24,4 @@ if __name__ == "__main__":
     PineconeVectorStore.from_documents(
         texts, embeddings, index_name=os.environ["INDEX_NAME"]
     )
+    print("Finished")
